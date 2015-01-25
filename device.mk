@@ -24,6 +24,10 @@ $(call inherit-product, vendor/samsung/kmini3g/kmini3g-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/thermal-engine-8226.conf:system/etc/thermal-engine-8226.conf
+
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
