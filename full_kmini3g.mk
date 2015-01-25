@@ -12,13 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/kmini3g/device_kmini3g.mk)
+# Inherit from kmini3g device
+$(call inherit-product, device/samsung/kmini3g/device.mk)
 
-## Device identifier. This must come after all inclusions
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := kmini3g
-PRODUCT_NAME := cm_kmini3g
+PRODUCT_NAME := full_kmini3g
+PRODUCT_BRAND := samsung
+PRODUCT_MODEL := SM-G800H
+PRODUCT_MANUFACTURER := samsung
 

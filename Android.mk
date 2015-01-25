@@ -12,13 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+LOCAL_PATH := $(call my-dir)
 
-# Inherit device configuration
-$(call inherit-product, device/samsung/kmini3g/device_kmini3g.mk)
+ifeq ($(TARGET_DEVICE),kmini3g)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := kmini3g
-PRODUCT_NAME := cm_kmini3g
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif
 
