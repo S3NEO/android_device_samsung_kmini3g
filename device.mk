@@ -20,6 +20,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # Proprietary files
 $(call inherit-product, vendor/samsung/kmini3g/kmini3g-vendor.mk)
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
