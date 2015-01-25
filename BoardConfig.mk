@@ -1,7 +1,7 @@
-USE_CAMERA_STUB := true
+# Inherit from msm8226-common
+-include device/samsung/msm8226-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/samsung/kmini3g/BoardConfigVendor.mk
+LOCAL_PATH := device/samsung/kmini3g
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
