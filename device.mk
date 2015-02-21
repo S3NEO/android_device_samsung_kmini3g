@@ -24,14 +24,19 @@ $(call inherit-product, vendor/samsung/kmini3g/kmini3g-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
-# Init Files
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:system/etc/permissions/android.hardware.sensor.gyroscope.xml
+
+# Ramdisk
 PRODUCT_PACKAGES += \
+    init.qcom.bt.sh
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
     init.qcom.rc \
-    init.qcom.ssr.sh \
     init.qcom.usb.rc \
-    ueventd.qcom.rc \
-    init.carrier.rc \
-    init.target.rc
+    ueventd.qcom.rc
 
 # Thermal
 PRODUCT_COPY_FILES += \
