@@ -20,8 +20,9 @@ LOCAL_PATH := device/samsung/kmini3g
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
-# CMHW
-BOARD_HARDWARE_CLASS += device/samsung/kmini3g/cmhw
+# Init
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_kmini3g.c
+TARGET_UNIFIED_DEVICE := true
 
 # Kernel
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
@@ -44,5 +45,3 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12797246464
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
-
-BOARD_HAS_NO_SELECT_BUTTON := true

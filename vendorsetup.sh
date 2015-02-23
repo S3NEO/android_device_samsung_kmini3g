@@ -1,1 +1,2 @@
+add_lunch_combo cm_kmini3g-eng
 add_lunch_combo cm_kmini3g-userdebug
