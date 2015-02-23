@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
+    init.crda.sh \
     init.qcom.bt.sh
 
 PRODUCT_PACKAGES += \

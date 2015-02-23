@@ -66,4 +66,3 @@ esac
 setprop bluetooth.status on
 
 exit 0
-

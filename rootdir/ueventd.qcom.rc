@@ -42,7 +42,7 @@
 /dev/smd6                 0660   system     system
 /dev/smd7                 0660   bluetooth  bluetooth
 
-#permissions for CSVT
+# Permissions for CSVT
 /dev/smd11                0660   radio      radio
 
 /dev/radio0               0640   system     system
@@ -100,7 +100,6 @@
 /dev/jpeg0                0660   system     camera
 /dev/jpeg1                0660   system     camera
 /dev/jpeg2                0660   system     camera
-/dev/adsprpc-smd          0664   system     system
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
@@ -108,17 +107,21 @@
 /dev/msm_vidc_dec         0660   system     audio
 /dev/msm_vidc_dec_sec     0660   system     audio
 /dev/msm_vidc_enc         0660   system     audio
+/dev/msm_vidc_enc_sec     0660   system     audio
 /dev/msm_rotator          0660   system     system
 /dev/hw_random            0660   system     system
-/dev/adsprpc-smd          0664   system     system
+/dev/adsprpc-smd          0660   media      camera
+/dev/graphics/*           0660   system     graphics
+/dev/tun                  0660   system     vpn
 
-#permissions for audio
+# Permissions for audio
 /dev/msm_qcelp            0660   system     audio
 /dev/msm_evrc             0660   system     audio
 /dev/msm_wma              0660   system     audio
 /dev/msm_wmapro           0660   system     audio
 /dev/msm_amrnb            0660   system     audio
 /dev/msm_amrwb            0660   system     audio
+/dev/msm_amrwb_in         0660   system     audio
 /dev/msm_amrwbplus        0660   system     audio
 /dev/msm_aac              0660   system     audio
 /dev/msm_multi_aac        0660   system     audio
@@ -135,17 +138,19 @@
 /dev/msm_pcm_lp_dec       0660   system     audio
 /dev/msm_preproc_ctl      0660   system     audio
 /dev/msm_rtac             0660   system     audio
+/dev/msm_sps              0660   system     audio
 /dev/msm_voicememo        0660   system     audio
 /dev/radio0               0640   fm_radio   fm_radio
 /dev/smd3                 0660   bluetooth  net_bt_stack
 /dev/smd2                 0660   bluetooth  net_bt_stack
+/dev/ttyHSL0              0660   radio      system
 /dev/ttyHSL1              0660   system     system
 /dev/mdm                  0660   system     radio
-/sys/devices/virtual/smdpkt/smdcntl*       open_timeout   0664 radio radio
 /dev/sdio_tty_ciq_00      0660   system     system
 /dev/tty_sdio_00          0660   system     system
 /dev/ttyGS0               0660   system     system
-/dev/i2c-5                0660   media       media
+/dev/i2c-5                0660   media      media
+/sys/devices/virtual/smdpkt/smdcntl*        open_timeout   0664 radio radio
 
 # DVB devices
 /dev/dvb/adapter0/demux*  0440   media       media
@@ -156,8 +161,8 @@
 /dev/tsc_mux0             0660   media       media
 /dev/tsc_ci0              0660   media       media
 
-# sensors
-/sys/devices/i2c-12/12-*  pollrate_ms 0664 system system
+# Sensors
+/sys/devices/i2c-12/12-*            pollrate_ms     0664     system    system
 /sys/devices/f9925000.i2c/i2c-0/0-* enable          0660     input     system
 /sys/devices/f9925000.i2c/i2c-0/0-* poll_delay      0660     input     system
 /sys/devices/virtual/optical_sensors/proximity      ps_adc         0660    input    system
@@ -167,9 +172,11 @@
 /sys/devices/virtual/input/input*                   poll           0660    input    system
 /sys/devices/virtual/input/input*                   pollrate_ms    0660    input    system
 
-# wlan
+# Wlan
 /dev/wcnss_wlan           0660   system     system
-#nfc permissions
+/dev/wcnss_ctrl           0660   system     system
+
+# Nfc permissions
 /dev/nfc-nci              0660    nfc         nfc
 
 # UIO devices
@@ -177,5 +184,8 @@
 /dev/uio1                 0660   system     system
 /dev/uio2                 0660   system     system
 
-#latin Mobile TV
+# Permission for dun
+/dev/dun                  0660   system     system
+
+# Latin Mobile TV
 /dev/isdbt                0660   system     system
