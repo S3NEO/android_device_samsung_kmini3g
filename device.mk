@@ -30,6 +30,11 @@ PRODUCT_COPY_FILES += \
 # IR
 PRODUCT_PACKAGES += \
     consumerir.msm8226
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.msm8226
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
