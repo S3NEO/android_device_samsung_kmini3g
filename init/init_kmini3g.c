@@ -64,7 +64,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("persist.radio.multisim.config", "dsds");
         property_set("ro.telephony.ril_class", "SamsungMSM8226DSRIL");
         gsm_properties();
-    } else if (strstr(bootloader, "G800HX")) {
+    } else if (strstr(bootloader, "G800HQ")) {
         /* kmini3g?? single sim variant */
         // property_set("ro.build.fingerprint", "samsung/kmini3gxx/kmini3g:4.4.2/KOT49H/G800HXXU1ANL1:user/release-keys");
         // property_set("ro.build.description", "kmini3gxx-user 4.4.2 KOT49H G800HXXU1ANL1 release-keys");
