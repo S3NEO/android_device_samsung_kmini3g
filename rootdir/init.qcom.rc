@@ -458,6 +458,8 @@ on boot
     chown system radio /sys/class/camera/front/front_camtype
 
     # Sensor
+    chmod 0600 /dev/iio:device0
+    chown system system /dev/iio:device0
     chown system radio /sys/bus/iio/devices/iio:device0/uevent
     chown system radio /sys/bus/iio/devices/iio:device0/dev
     chown system radio /sys/bus/iio/devices/iio:device0/buffer/length
