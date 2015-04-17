@@ -1147,6 +1147,8 @@ on property:sys.perf.profile=0
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor conservative
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor conservative
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor conservative
+    write /sys/class/devfreq/qcom,cpubw.67/governor powersave
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor powersave
 
 # Balanced
 on property:sys.perf.profile=1
@@ -1155,6 +1157,8 @@ on property:sys.perf.profile=1
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor interactive
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor interactive
+    write /sys/class/devfreq/qcom,cpubw.67/governor msm_cpufreq
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
 
 # High performance
 on property:sys.perf.profile=2
@@ -1167,3 +1171,5 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor performance
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
+    write /sys/class/devfreq/qcom,cpubw.67/governor performance
+    write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
