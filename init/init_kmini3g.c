@@ -56,8 +56,8 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
 
     if (strstr(bootloader, "G800HX")) {
         /* kmini3g */
-        property_set("ro.build.fingerprint", "samsung/kmini3gxx/kmini3g:4.4.2/KOT49H/G800HXXU1ANL1:user/release-keys");
-        property_set("ro.build.description", "kmini3gxx-user 4.4.2 KOT49H G800HXXU1ANL1 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kmini3gxx/kmini3g:5.1.1/LMY47X/G800HXXU1BOI2:user/release-keys");
+        property_set("ro.build.description", "kmini3gxx-user 5.1.1 LMY47X G800HXXU1BOI2 release-keys");
         property_set("ro.product.model", "SM-G800H");
         property_set("ro.product.device", "kmini3g");
         property_set("persist.dsds.enabled", "true");
