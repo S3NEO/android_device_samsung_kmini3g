@@ -5,6 +5,13 @@
 # RIL
 rild.libpath=/system/lib/libsec-ril.so
 rild.libargs=-d /dev/smd0
+persist.dsds.enabled=true
+persist.radio.multisim.config=dsds
+ro.telephony.ril_class=SamsungMSM8226DSRIL
+rild.libpath2=/system/lib/libsec-ril-dsds.so
+ro.multisim.set_audio_params=true
+ro.multisim.simslotcount=2
+ro.sec_ril.version=51
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
 persist.rild.nitz_long_ons_1=
