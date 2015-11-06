@@ -206,14 +206,14 @@
 	</path>
 
 	<!-- cp2 call part -->
-	<path name="voice-call-cp2">
+	<path name="voice2-call">
 		<ctl name="SLIM_0_RX_Voice Mixer Voice2" value="1" />
 		<ctl name="Voice2_Tx Mixer SLIM_0_TX_Voice2" value="1" />
 	</path>
 
-	<path name="voice-call-cp2 bt-sco">
-		<ctl name="INTERNAL_BT_SCO_RX_Voice Mixer Voice2" value="1" />
-		<ctl name="Voice2_Tx Mixer INTERNAL_BT_SCO_TX_Voice2" value="1" />
+	<path name="voice2-call bt-sco">
+		<ctl name="AUX_PCM_RX_Voice Mixer Voice2" value="1" />
+		<ctl name="Voice2_Tx Mixer AUX_PCM_TX_Voice2" value="1" />
 	</path>
 	
 	<path name="incall-rec-uplink-cp2">
