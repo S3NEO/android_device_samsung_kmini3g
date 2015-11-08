@@ -53,3 +53,6 @@ ro.qc.sdk.sensors.gestures=true
 
 # Wi-Fi
 wifi.interface=wlan0
+
+# Disable Strict Mode
+persist.sys.strictmode.disable=true
