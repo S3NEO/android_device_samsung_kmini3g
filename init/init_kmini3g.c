@@ -65,7 +65,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.multisim.set_audio_params", "true");
         property_set("ro.multisim.simslotcount", "2");
         property_set("ro.ril.telephony.mqanelements", "6");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226DSRIL");
+        property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
         gsm_properties();
     } else if (strstr(bootloader, "G800HQ")) {
         /* kmini3g?? single sim variant */
