@@ -1,5 +1,5 @@
 # Qualcomm
-ro.vendor.extension_library=/system/vendor/lib/libqc-opt.so
+ro.vendor.extension_library=/vendor/lib/libqti-perfd-client.so
 
 # Disable Strict Mode
 persist.sys.strictmode.disable=true
