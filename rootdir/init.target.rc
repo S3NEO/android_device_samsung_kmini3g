@@ -193,6 +193,7 @@ on boot
     chown system radio /sys/class/sensors/accelerometer_sensor/vendor
     chown system radio /sys/class/sensors/accelerometer_sensor/name
     chown system radio /sys/class/sensors/accelerometer_sensor/selftest
+    chown system radio /sys/class/sensors/accelerometer_sensor/lowpassfilter
 
     # Proximity_sensor
     chown system radio /sys/class/sensors/proximity_sensor/raw_data
@@ -266,6 +267,7 @@ on boot
     chown system radio /sys/class/sensors/temphumidity_sensor/engine_ver2
     chown system radio /sys/class/sensors/temphumidity_sensor/cp_thm
     chown system radio /sys/class/sensors/temphumidity_sensor/send_accuracy
+    chown system radio /sys/class/sensors/temphumidity_sensor/batt_temperature
 
     # Grip_sensor
     chown system radio /sys/class/sensors/grip_sensor/vendor
@@ -287,6 +289,7 @@ on boot
     chown system radio /sys/class/sensors/hrm_sensor/led_current
     chown system radio /sys/class/sensors/hrm_sensor/int_pin_check
     chown system radio /sys/class/sensors/hrm_sensor/lib_ver
+    chown system radio /sys/class/sensors/hrm_sensor/hrm_flush
     chown system radio /sys/class/sensors/hrm_sensor/eol_lib_ver
     chown system radio /sys/class/sensors/hrm_sensor/elf_lib_ver
     chown system radio /sys/class/sensors/hrm_sensor/adpd_reg_read
@@ -296,7 +299,14 @@ on boot
     chown system radio /sys/class/sensors/hrm_sensor/adpd_stat
     chown system radio /sys/class/sensors/hrm_sensor/name
     chown system radio /sys/class/sensors/hrm_sensor/vendor
+    chown system radio /sys/class/sensors/hrm_sensor/device_id
 
+    # Meta_sensor
+    chown system radio /sys/class/sensors/sensor_dev/flush
+    
+    # UV_sensor
+    chown system radio /sys/class/sensors/uv_sensor/raw_data
+    
     # SensorHub
     chown system radio /sys/class/sensors/ssp_sensor/enable
     chown system radio /sys/class/sensors/ssp_sensor/mcu_rev
@@ -310,22 +320,31 @@ on boot
     chown system radio /sys/class/sensors/ssp_sensor/mcu_sleep_test
     chown system radio /sys/class/sensors/ssp_sensor/ori_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/mag_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/uncal_mag_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/temp_humi_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/accel_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/rot_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/game_rot_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/step_det_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/gyro_poll_delay
+    chown system radio /sys/class/sensors/ssp_sensor/uncalib_gyro_poll_delay
     chown system radio /sys/class/sensors/ssp_sensor/ssp_flush
+    chown system radio /sys/class/sensors/ssp_sensor/shake_cam
     chmod 0600 /dev/batch_io
     chown system system /dev/batch_io
-
+    
     # Gesture_sensor
     chown system radio /sys/class/sensors/gesture_sensor/vendor
     chown system radio /sys/class/sensors/gesture_sensor/name
     chown system radio /sys/class/sensors/gesture_sensor/raw_data
     chown system radio /sys/class/sensors/gesture_sensor/ir_current
     chown system radio /sys/class/sensors/gesture_sensor/selftest
+    
+    # Fingerprint_sensor
+    mkdir /dev/validity 0770 system system
+    chown system radio /sys/class/fingerprint/fingerprint/type_check
+    chown system radio /sys/class/fingerprint/fingerprint/name
+    chown system radio /sys/class/fingerprint/fingerprint/vendor
 
     # SHTC1 BULK
     chmod 0600 /dev/shtc1_sensor
