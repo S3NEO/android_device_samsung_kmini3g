@@ -514,3 +514,10 @@ on property:sys.perf.profile=2
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor performance
     write /sys/class/devfreq/qcom,cpubw.67/governor performance
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor performance
+
+# Fingerprint Frameworks starts fingerprintService
+service vcsFPService /system/bin/vcsFPService
+    class late_start
+    user system
+    group system
+
