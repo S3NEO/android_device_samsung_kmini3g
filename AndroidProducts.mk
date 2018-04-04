@@ -15,3 +15,8 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_kmini3g.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_kmini3g-user \
+    lineage_kmini3g-userdebug \
+    lineage_kmini3g-eng
