@@ -28,5 +28,6 @@
 // skips conn update at conn completion
 #define BTA_BLE_SKIP_CONN_UPD FALSE
 
-#endif
+#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
 
+#endif

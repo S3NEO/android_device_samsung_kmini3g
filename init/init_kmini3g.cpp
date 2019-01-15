@@ -42,21 +42,12 @@ void gsm_properties()
     property_set("ro.telephony.default_network", "0");
 }
 
-void vendor_load_properties()
+void init_variant_properties()
 {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
 
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
-        return;
+    std::string bootloader = property_get("ro.bootloader");
 
-    property_get("ro.bootloader", bootloader);
-
-    if (strstr(bootloader, "G800HX")) {
+    if (bootloader.find("G800HX")) {
         /* kmini3g */
         property_set("ro.build.fingerprint", "samsung/kmini3gxx/kmini3g:5.1.1/LMY47X/G800HXXU1BOI2:user/release-keys");
         property_set("ro.build.description", "kmini3gxx-user 5.1.1 LMY47X G800HXXU1BOI2 release-keys");
@@ -69,17 +60,13 @@ void vendor_load_properties()
         property_set("ro.ril.telephony.mqanelements", "6");
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
         gsm_properties();
-    } else if (strstr(bootloader, "G800HQ")) {
+    } else if (bootloader.find("G800HQ")) {
         /* kmini3g?? single sim variant */
-        // property_set("ro.build.fingerprint", "samsung/kmini3gxx/kmini3g:4.4.2/KOT49H/G800HXXU1ANL1:user/release-keys");
-        // property_set("ro.build.description", "kmini3gxx-user 4.4.2 KOT49H G800HXXU1ANL1 release-keys");
+        property_set("ro.build.fingerprint", "samsung/kmini3gxx/kmini3g:4.4.2/KOT49H/G800HXXU1ANL1:user/release-keys");
+        property_set("ro.build.description", "kmini3gxx-user 4.4.2 KOT49H G800HXXU1ANL1 release-keys");
         property_set("ro.product.model", "SM-G800HQ");
         property_set("ro.product.device", "kmini3g??");
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
         gsm_properties();
     }
-
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
 }

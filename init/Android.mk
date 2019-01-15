@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_CFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
+LOCAL_CFLAGS := -Wall
 LOCAL_SRC_FILES := init_kmini3g.cpp
 LOCAL_MODULE := libinit_kmini3g
 
