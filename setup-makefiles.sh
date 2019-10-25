@@ -18,7 +18,9 @@
 
 set -e
 
-export INITIAL_COPYRIGHT_YEAR=2014
+INITIAL_COPYRIGHT_YEAR=2014
+DEVICE=kmini3g
+VENDOR=samsung
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -33,21 +35,11 @@ if [ ! -f "${HELPER}" ]; then
 fi
 . "${HELPER}"
 
-# Initialize the helper for common device
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${LINEAGE_ROOT}" true
-
-# Copyright headers and common guards
-write_headers "s3ve3gxx s3ve3gjv s3ve3gds"
-
-write_makefiles "${MY_DIR}/common-proprietary-files.txt"
-
-write_footers
-
 if [ ! -z "${VARIANT_COPYRIGHT_YEAR}" ]; then
     export INITIAL_COPYRIGHT_YEAR="${VARIANT_COPYRIGHT_YEAR}"
 fi
 
-# Reinitialize the helper for device
+# Initialize the helper for device
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}"
 
 # Copyright headers and guards

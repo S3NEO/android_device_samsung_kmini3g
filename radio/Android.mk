@@ -1,4 +1,5 @@
 #
+# Copyright (C) 2015 The CyanogenMod Project
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,5 +15,12 @@
 # limitations under the License.
 #
 
-# NFC
-DEVICE_MANIFEST_FILE += device/samsung/s3ve3g/nfc/manifest.xml
+LOCAL_PATH:= $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE               := rild_dsds.rc
+LOCAL_MODULE_CLASS         := ETC
+LOCAL_SRC_FILES            := rild_dsds.rc
+LOCAL_MODULE_RELATIVE_PATH := init
+LOCAL_VENDOR_MODULE        := true
+include $(BUILD_PREBUILT)

@@ -1,3 +1,4 @@
+
 /*
  * Copyright (C) 2016 The CyanogenMod Project
  * Copyright (C) 2017 The LineageOS Project
@@ -29,7 +30,6 @@
 #define PANEL_MAX_BRIGHTNESS_NODE "/sys/class/leds/lcd-backlight/max_brightness"
 #define BUTTON_BRIGHTNESS_NODE "/sys/class/leds/button-backlight/brightness"
 #define LED_BLINK_NODE "/sys/class/sec/led/led_blink"
-
 
 // Uncomment to enable variable button brightness
 //#define VAR_BUTTON_BRIGHTNESS 1
