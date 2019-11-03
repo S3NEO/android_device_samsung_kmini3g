@@ -52,12 +52,7 @@ PRODUCT_PACKAGES += \
     FMRadio
     
 # Fingerprint
-$(call inherit-product, device/samsung/kmini3g/fingerprint/product.mk)    
-
-# IPv6 tethering
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
+$(call inherit-product, device/samsung/kmini3g/fingerprint/product.mk)
 
 # IR Blaster
 PRODUCT_PACKAGES += \
