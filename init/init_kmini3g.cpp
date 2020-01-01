@@ -58,8 +58,8 @@ void init_target_properties()
 
     if (bootloader.find("G800HX") == 0) {
         /* kmini3g */
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kmini3gxx/kmini3g:5.1.1/LMY47X/G800HXXU1BOI2:user/release-keys");
-        property_override("ro.build.description", "kmini3gxx-user 5.1.1 LMY47X G800HXXU1BOI2 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kmini3gxx/kmini3g:6.0.1/MMB29M/G800HXXU1CRJ1:user/release-keys");
+        property_override("ro.build.description", "kmini3gxx-user 6.0.1 MMB29M G800HXXU1CRJ1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G800H");
         property_override_dual("ro.product.device", "ro.vendor.product.device", "kmini3g");
         gsm_properties();
