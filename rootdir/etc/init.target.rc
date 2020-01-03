@@ -341,6 +341,7 @@ on boot
     
     # Fingerprint_sensor
     mkdir /dev/validity 0770 system system
+    mkdir /data/validity 0770 system system
     chown system radio /sys/class/fingerprint/fingerprint/type_check
     chown system radio /sys/class/fingerprint/fingerprint/name
     chown system radio /sys/class/fingerprint/fingerprint/vendor
@@ -387,18 +388,3 @@ on boot
     # Permission for touchkey
     chown system system /sys/class/sec/sec_touchkey/extra_button_event
     chown system system /sys/class/sec/sec_touchkey/glove_mode
-    
-on property:crypto.driver.load=1
-    insmod /system/lib/modules/qce.ko
-    insmod /system/lib/modules/qcedev.ko
-
-on property:crypto.driver.load=0
-    exec /system/bin/rmmod qcedev.ko
-    exec /system/bin/rmmod qce.ko
-
-# Fingerprint Frameworks starts fingerprintService
-service vcsFPService /system/bin/vcsFPService
-    class late_start
-    user system
-    group system
-
