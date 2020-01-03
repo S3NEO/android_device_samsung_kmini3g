@@ -56,7 +56,7 @@ void init_target_properties()
 
     std::string bootloader = GetProperty("ro.bootloader", "");
 
-    if (bootloader.find("G800HX") == 0) {
+    if (bootloader.find("G800H") == 0) {
         /* kmini3g */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kmini3gxx/kmini3g:6.0.1/MMB29M/G800HXXU1CRJ1:user/release-keys");
         property_override("ro.build.description", "kmini3gxx-user 6.0.1 MMB29M G800HXXU1CRJ1 release-keys");
@@ -64,7 +64,7 @@ void init_target_properties()
         property_override_dual("ro.product.device", "ro.vendor.product.device", "kmini3g");
         gsm_properties();
     } else if (bootloader.find("G800HQ") == 0) {
-        /* kmini3g */
+        /* kmini3g turkish version */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kmini3gxx/kmini3g:4.4.2/KOT49H/G800HXXU1ANL1:user/release-keys");
         property_override("ro.build.description", "kmini3gxx-user 4.4.2 KOT49H G800HXXU1ANL1 release-keys");
         property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-G800HQ");
