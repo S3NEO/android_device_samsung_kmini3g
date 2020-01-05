@@ -119,6 +119,9 @@ ro.multisim.simslotcount=2
 ro.multisim.set_audio_params=true
 ro.telephony.ril.config=simactivation
 
+# Store correct IMSI when retreived from SIMRecords and use it for RuimRecords		
+ro.telephony.get_imsi_from_sim=true
+
 # Sensors
 ro.qc.sdk.gestures.camera=false
 ro.qc.sdk.camera.facialproc=false
