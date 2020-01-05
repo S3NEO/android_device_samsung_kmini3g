@@ -5,9 +5,7 @@
 /sys/devices/virtual/fingerprint(/.*)?                  u:object_r:sysfs_fingerprint:s0
 
 # firmware files
-/bt_firmware(/.*)?	    u:object_r:tmp_root_mount_file:s0
-/firmware(/.*)?		    u:object_r:tmp_root_mount_file:s0
-/firmware-modem(/.*)?	u:object_r:tmp_root_mount_file:s0
-/persist(/.*)?		    u:object_r:tmp_root_mount_file:s0
-/tombstones(/.*)?	    u:object_r:tmp_root_mount_file:s0
-
+/bt_firmware(/.*)?	    u:object_r:firmware_file:s0
+/firmware(/.*)?		    u:object_r:firmware_file:s0
+/firmware-modem(/.*)?	u:object_r:firmware_file:s0
+/tombstones(/.*)?	    u:object_r:firmware_file:s0
