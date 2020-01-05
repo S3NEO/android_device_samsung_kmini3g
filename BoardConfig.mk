@@ -54,8 +54,8 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 include $(DEVICE_PATH)/fingerprint/board.mk
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8226
-TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/kmini3g/init/init_kmini3g.cpp
+TARGET_INIT_VENDOR_LIB := libinit_kmini3g
+TARGET_RECOVERY_DEVICE_MODULES := libinit_kmini3g
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
