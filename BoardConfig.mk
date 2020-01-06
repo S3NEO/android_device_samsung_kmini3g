@@ -106,7 +106,8 @@ BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
-include $(DEVICE_PATH)/sepolicy/sepolicy.mk
+CONFIG_NEO_SAM_SEPOLICY_TYPE := temporary
+include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
