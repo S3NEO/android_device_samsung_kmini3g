@@ -108,6 +108,9 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
+# We have very small recovery partition, and we can't use higher DPI.
+TARGET_RECOVERY_DENSITY := hdpi
+
 # SELinux
 CONFIG_NEO_SAM_SEPOLICY_TYPE := temporary
 include $(COMMON_PATH)/sepolicy/sepolicy.mk
