@@ -61,8 +61,7 @@ PRODUCT_PACKAGES += \
 
 # IR Blaster
 PRODUCT_PACKAGES += \
-    android.hardware.ir@1.0-impl \
-    consumerir.msm8226
+    android.hardware.ir@1.0-service.samsung
 
 # Keylayout
 PRODUCT_COPY_FILES += \
