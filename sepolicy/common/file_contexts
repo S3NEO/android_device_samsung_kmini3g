@@ -4,8 +4,13 @@
 # sysfs - fingerprint
 /sys/devices/virtual/fingerprint(/.*)?                  u:object_r:sysfs_fingerprint:s0
 
+/sys/devices/virtual/sec/sec_ir/ir_send                                                           u:object_r:sysfs_ir:s0
+
+
 # firmware files
 /bt_firmware(/.*)?	    u:object_r:firmware_file:s0
 /firmware(/.*)?		    u:object_r:firmware_file:s0
 /firmware-modem(/.*)?	u:object_r:firmware_file:s0
 /tombstones(/.*)?	    u:object_r:firmware_file:s0
+
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung      u:object_r:hal_ir_default_exec:s0
