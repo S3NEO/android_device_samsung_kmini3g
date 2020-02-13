@@ -210,8 +210,15 @@ vendor/lib/libprotobuf-cpp-lite.so
 vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
-lib/hw/sensors.msm8226.so:vendor/lib/hw/sensors.vendor.msm8226.so
+etc/alp_cal.dat
+etc/param.dat
 lib/libyasalgo.so:vendor/lib/libyasalgo.so
+lib/libhr.so:vendor/lib/libhr.so 
+lib/libacdapi_clb.so:vendor/lib/libacdapi_clb.so 
+lib/libinvensense_hal.so:vendor/lib/libinvensense_hal.so 
+lib/libmllite.so:vendor/lib/libmllite.so 
+lib/libmplmpu.so:vendor/lib/libmplmpu.so
+lib/hw/sensors.msm8226.so:vendor/lib/hw/sensors.vendor.msm8226.so
 
 # Time services
 -app/TimeService/TimeService.apk
