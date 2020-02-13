@@ -15,7 +15,7 @@
 #
 
 # Board specific SELinux policy variable definitions
-ifeq($(CONFIG_NEO_SAM_SEPOLICY_TYPE), temporary)
+ifeq ($(CONFIG_NEO_SAM_SEPOLICY_TYPE), temporary)
 BOARD_SEPOLICY_DIRS += \
     device/samsung/kmini3g/sepolicy/temporary
 else
