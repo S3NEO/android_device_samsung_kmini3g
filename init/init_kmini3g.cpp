@@ -1,6 +1,6 @@
 /*
    Copyright (c) 2016, The Linux Foundation. All rights reserved.
-   Copyright (c) 2017-2018, The LineageOS Project. All rights reserved.
+   Copyright (c) 2017-2020, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -42,12 +42,6 @@
 using android::base::GetProperty;
 using android::init::property_set;
 
-void gsm_properties()
-{
-    property_set("ro.telephony.default_network", "3");
-    property_set("telephony.lteOnGsmDevice", "0");
-}
-
 void init_target_properties()
 {
     std::string platform = GetProperty("ro.board.platform", "");
@@ -62,16 +56,16 @@ void init_target_properties()
         property_override("ro.build.description", "kmini3gxx-user 6.0.1 MMB29M G800HXXU1CRJ1 release-keys");
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G800H");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "kmini3g");
-        gsm_properties();
+        gsm_properties("3", "0");
     } else if (bootloader.find("G800HQ") == 0) {
         /* kmini3g turkish version */
         property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/kmini3gxx/kmini3g:4.4.2/KOT49H/G800HXXU1ANL1:user/release-keys");
         property_override("ro.build.description", "kmini3gxx-user 4.4.2 KOT49H G800HXXU1ANL1 release-keys");
         property_override_dual("ro.product.model", "ro.product.vendor.model", "SM-G800HQ");
         property_override_dual("ro.product.device", "ro.product.vendor.device", "kmini3g");
-        gsm_properties();
+        gsm_properties("3", "0");
     } else {
-        gsm_properties();
+        gsm_properties("3", "0");
     }
 
     std::string device = GetProperty("ro.product.device", "");
