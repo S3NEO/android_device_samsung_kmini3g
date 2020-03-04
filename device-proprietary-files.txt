@@ -220,11 +220,6 @@ lib/libmllite.so:vendor/lib/libmllite.so
 lib/libmplmpu.so:vendor/lib/libmplmpu.so
 lib/hw/sensors.msm8226.so:vendor/lib/hw/sensors.vendor.msm8226.so
 
-# Activity recognition
-vendor/lib/hw/activity_recognition.msm8226.so
-vendor/lib/libsensor1.so:system/vendor/lib/libsensor1.so
-vendor/lib/libsensor_reg.so:system/vendor/lib/libsensor_reg.so
-
 # Time services
 -app/TimeService/TimeService.apk
 bin/time_daemon:vendor/bin/time_daemon
