@@ -39,6 +39,13 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 # Build
 BLOCK_BASED_OTA := true
 
+# Camera
+TARGET_NEEDS_TEXT_RELOCATIONS := true
+
+# Charger
+BOARD_NO_CHARGER_LED := true
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
@@ -58,7 +65,7 @@ TARGET_LIBINIT_MSM8226_DEFINES_FILE := device/samsung/kmini3g/init/init_kmini3g.
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 zcache.enabled=1 zcache.compressor=lz4
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 zcache.enabled=1 zcache.compressor=lz4
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true

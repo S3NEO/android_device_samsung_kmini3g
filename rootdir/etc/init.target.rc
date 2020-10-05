@@ -388,3 +388,6 @@ on boot
     # Permission for touchkey
     chown system system /sys/class/sec/sec_touchkey/extra_button_event
     chown system system /sys/class/sec/sec_touchkey/glove_mode
+
+on charger
+    write /sys/class/leds/lcd-backlight/brightness 150
