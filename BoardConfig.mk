@@ -54,8 +54,9 @@ TARGET_EXFAT_DRIVER := sdfat
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 
 # FM
+AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 BOARD_HAVE_QCOM_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := true 
+TARGET_QCOM_NO_FM_FIRMWARE := true
 
 # Fingerprint
 include $(DEVICE_PATH)/fingerprint/board.mk
