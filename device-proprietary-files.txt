@@ -210,7 +210,7 @@ vendor/lib/libprotobuf-cpp-lite.so
 vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
-etc/alp_cal.dat
+vendor/etc/alp_cal.dat
 etc/param.dat
 lib/libyasalgo.so:vendor/lib/libyasalgo.so
 lib/libhr.so:vendor/lib/libhr.so 
