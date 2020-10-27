@@ -66,7 +66,7 @@ TARGET_INIT_VENDOR_LIB := libinit_kmini3g
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 zcache.enabled=1 zcache.compressor=lz4
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x37 zcache.enabled=1 zcache.compressor=lz4
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
