@@ -47,10 +47,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FlipFlap
     
-# FM
-PRODUCT_PACKAGES += \
-    FMRadio
-    
 # Fingerprint
 $(call inherit-product, device/samsung/kmini3g/fingerprint/product.mk)    
 

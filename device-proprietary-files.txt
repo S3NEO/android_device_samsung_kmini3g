@@ -150,9 +150,6 @@ vendor/lib/libssd.so|f7216c09cd17a94fb946179503cd286262be9de8
 # DRM
 lib/libdrmdecrypt.so:vendor/lib/libdrmdecrypt.so
 
-# FM Radio - From lineage-14.1-20180822-s3ve3g
-lib/libfmjni.so|5853a32bc9af140f469c2ce647c0db704b8e4482
-
 # IPC router security
 bin/irsc_util:vendor/bin/irsc_util
 etc/sec_config:vendor/etc/sec_config
