@@ -206,6 +206,10 @@ vendor/lib/libprotobuf-cpp-full.so:vendor/lib/libprotobuf-cpp-crap.so
 vendor/lib/libprotobuf-cpp-lite.so
 vendor/lib/libril-qcril-hook-oem.so
 
+# Qualcomm Framework - Pinned to Samsung Galaxy S5 G900FXXS1BPCL_G900FOXA1BOJ1_BTU
+vendor/lib/libdsi_netctrl.so|d5d25fd5b1ea250bdfcb64059eafaf609fe2e32c
+vendor/lib/libqdi.so|6bd79ba4dc4b4af654cda666e829312ba07a22e9
+
 # Sensors
 vendor/etc/alp_cal.dat
 etc/param.dat
